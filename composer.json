@@ -29,8 +29,8 @@
     "source": "https://github.com/yii-dream-team/smspilot"
   },
   "require": {
-    "php": ">=5.4.0",
-    "guzzlehttp/guzzle": "^6.0"
+    "php": ">=7.4.0",
+    "guzzlehttp/guzzle": "^7.0"
   },
   "autoload": {
     "psr-4": {
