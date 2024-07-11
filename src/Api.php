@@ -12,7 +12,7 @@ use GuzzleHttp\Client;
  */
 class Api
 {
-    const API_URL = 'https://smspilot.ru/api2.php';
+    const API_URL = 'https://smspilot.ru';
     const SANDBOX_KEY = 'XXXXXXXXXXXXYYYYYYYYYYYYZZZZZZZZXXXXXXXXXXXXYYYYYYYYYYYYZZZZZZZZ';
 
     public $sandbox = false;
@@ -83,7 +83,7 @@ class Api
             $requestParams['apikey'] = self::SANDBOX_KEY;
         }
 
-        $response = $this->client->post(null, ['body' => json_encode($requestParams)]);
+        $response = $this->client->post('api2.php', ['body' => json_encode($requestParams)]);
         if ($response->getStatusCode() != 200) {
             throw new \Exception('Api http error: ' . $response->getStatusCode(), $response->getStatusCode());
         }
